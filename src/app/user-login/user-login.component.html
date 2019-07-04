@@ -12,16 +12,18 @@
                           <div class="row">
                               <div class="col-md-4">
                                 <mat-form-field class="example-full-width">
-                                  <input matInput placeholder="Email" type="text" #email>
+                                  <input matInput placeholder="Email" type="text" value="achmad.amri@gmail.com" #email>
                                 </mat-form-field>
                               </div>
                               <div class="col-md-4">
                                 <mat-form-field class="example-full-width">
-                                  <input matInput placeholder="Password" type="password" #password>
+                                  <input matInput placeholder="Password" type="password" value="P@55w0rd" #password>
                                 </mat-form-field>
                               </div>
                           </div>
                           <button mat-raised-button type="submit" class="btn btn-danger pull-right" (click)="login(email.value, password.value);">Login</button>
+                          <div class="clearfix"></div>
+                          <button mat-raised-button type="button" class="btn btn-danger pull-right" (click)="isLoggedIn();">Is Logged In</button>
                           <div class="clearfix"></div>
                       </form>
                   </div>

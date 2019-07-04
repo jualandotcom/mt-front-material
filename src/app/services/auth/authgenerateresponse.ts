@@ -1,3 +1,5 @@
+import { Claims } from './claims';
+
 export class AuthGenerateResponse {
     requestId: string;
     requestDate: string;
@@ -7,4 +9,5 @@ export class AuthGenerateResponse {
     error: string;
     message: string;
     token: string;
+    claims: Claims;
 }
