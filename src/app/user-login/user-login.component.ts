@@ -23,10 +23,6 @@ export class UserLoginComponent implements OnInit {
   ngOnInit() {
   }
 
-  test() {
-    console.log(this.authGenerateResponse);
-  }
-
   login(email: string, password: string) {
     var tzoffset = (new Date()).getTimezoneOffset() * 60000;
     var localISOTime = (new Date(Date.now() - tzoffset)).toISOString().slice(0, -1);
@@ -44,7 +40,7 @@ export class UserLoginComponent implements OnInit {
           console.log(data);
 
           this.authGenerateResponse = data;
-          // this.router.navigate(['/']);
+          this.router.navigate(['/dashboard']);
         },
         error => {
           console.log(error);
@@ -52,7 +48,7 @@ export class UserLoginComponent implements OnInit {
       );
   }
 
-  randomString(length: number): string {
+  private randomString(length: number): string {
     let outString: string = '';
     let inOptions: string = 'abcdefghijklmnopqrstuvwxyz0123456789';
 
@@ -73,17 +69,10 @@ export class UserLoginComponent implements OnInit {
     localStorage.removeItem('exp');
   }
 
-  public isLoggedIn() {
-    console.log(moment().isBefore(this.getExpiration()));
-    return moment().isBefore(this.getExpiration());
-  }
-
-  isLoggedOut() {
-    return !this.isLoggedIn();
-  }
-
-  getExpiration() {
-    return moment.unix(Number(localStorage.getItem('exp')));
+  isLoggedIn() {
+    let day = moment.unix(Number(localStorage.getItem('exp')));
+    console.log(`isLoggedIn: ${moment().isBefore(day)}`);
+    return moment().isBefore(day);
   }
 
 }
