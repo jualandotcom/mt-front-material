@@ -1,5 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { UserAddRequest } from './useraddrequest';
+import { UserAddResponse } from './useraddresponse';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -9,10 +12,7 @@ export class UserService {
 
   constructor(private httpClient: HttpClient) { }
 
-  // public getTest() {
-  //   return this.httpClient.get(`${this.apiUrl}/test`);
-  // }
-  getTest() {
-    return this.httpClient.get(`${this.apiUrl}/test`);
+  postAdd(userAddRequest: UserAddRequest): Observable<UserAddResponse> {
+    return this.httpClient.post<UserAddResponse>(`${this.apiUrl}/add`, userAddRequest);
   }
 }
