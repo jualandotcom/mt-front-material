@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Router, CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
-import * as moment from "moment";
+import * as moment from 'moment';
 
 @Injectable({ providedIn: 'root' })
 export class AuthGuard implements CanActivate {
@@ -17,8 +17,7 @@ export class AuthGuard implements CanActivate {
     }
 
     isLoggedIn() {
-      let day = moment.unix(Number(localStorage.getItem('exp')));
-      console.log(`isLoggedIn: ${moment().isBefore(day)}`);
+      const day = moment.unix(Number(localStorage.getItem('exp')));
       return moment().isBefore(day);
     }
 }

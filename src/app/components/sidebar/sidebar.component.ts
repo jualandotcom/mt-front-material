@@ -28,12 +28,7 @@ export class SidebarComponent implements OnInit {
 
   constructor() { }
 
-  ngOnChanges() {
-    console.log('SidebarComponent ngOnChanges');
-  }
-
   ngOnInit() {
-    console.log('SidebarComponent ngOnInit');
     this.menuItems = ROUTES.filter(menuItem => menuItem);
   }
 
