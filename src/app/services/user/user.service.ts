@@ -4,6 +4,8 @@ import { UserAddRequest } from './useraddrequest';
 import { UserAddResponse } from './useraddresponse';
 import { UserNotifyRequest } from './usernotifyrequest';
 import { UserNotifyResponse } from './usernotifyresponse';
+import { UserConfirmationRequest } from './userconfirmationrequest';
+import { UserConfirmationResponse } from './userconfirmationresponse';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -20,5 +22,9 @@ export class UserService {
 
   postNotify(userNotifyRequest: UserNotifyRequest): Observable<UserNotifyResponse> {
     return this.httpClient.post<UserNotifyResponse>(`${this.apiUrl}/notify`, userNotifyRequest);
+  }
+
+  postConfirmation(userConfirmationRequest: UserConfirmationRequest): Observable<UserConfirmationResponse> {
+    return this.httpClient.post<UserConfirmationResponse>(`${this.apiUrl}/confirmation`, userConfirmationRequest);
   }
 }

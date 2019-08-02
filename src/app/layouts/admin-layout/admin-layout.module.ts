@@ -7,6 +7,7 @@ import { DashboardComponent } from '../../dashboard/dashboard.component';
 import { UserProfileComponent } from '../../user-profile/user-profile.component';
 import { UserLoginComponent } from '../../user-login/user-login.component';
 import { UserRegisterComponent } from '../../user-register/user-register.component';
+import { UserConfirmationComponent } from '../../user-confirmation/user-confirmation.component';
 import { TableListComponent } from '../../table-list/table-list.component';
 import { TypographyComponent } from '../../typography/typography.component';
 import { IconsComponent } from '../../icons/icons.component';
@@ -40,6 +41,7 @@ import {
     UserProfileComponent,
     UserLoginComponent,
     UserRegisterComponent,
+    UserConfirmationComponent,
     TableListComponent,
     TypographyComponent,
     IconsComponent,

@@ -4,6 +4,7 @@ import { DashboardComponent } from '../../dashboard/dashboard.component';
 import { UserProfileComponent } from '../../user-profile/user-profile.component';
 import { UserLoginComponent } from '../../user-login/user-login.component';
 import { UserRegisterComponent } from '../../user-register/user-register.component';
+import { UserConfirmationComponent } from '../../user-confirmation/user-confirmation.component';
 import { TableListComponent } from '../../table-list/table-list.component';
 import { TypographyComponent } from '../../typography/typography.component';
 import { IconsComponent } from '../../icons/icons.component';
@@ -16,7 +17,8 @@ export const AdminLayoutRoutes: Routes = [
     { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard] },
     { path: 'user-profile', component: UserProfileComponent, canActivate: [AuthGuard] },
     { path: 'user-login', component: UserLoginComponent },
-    { path: 'user-register', component: UserRegisterComponent },
+    { path: 'user-register', component:  UserRegisterComponent},
+    { path: 'user-confirmation', component: UserConfirmationComponent },
     { path: 'table-list', component: TableListComponent, canActivate: [AuthGuard] },
     { path: 'typography', component: TypographyComponent, canActivate: [AuthGuard] },
     { path: 'icons', component: IconsComponent, canActivate: [AuthGuard] },

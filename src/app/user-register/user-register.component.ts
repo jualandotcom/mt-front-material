@@ -22,14 +22,14 @@ export class UserRegisterComponent implements OnInit {
     private userService: UserService) { }
 
   ngOnInit() {
-    this.userAddRequest.tbuFirstname = 'Achmad';
-    this.userAddRequest.tbuLastname = 'Amri';
-    this.userAddRequest.tbuMobilePhone = '08158800230';
-    this.userAddRequest.tbuPlaceOfBirth = 'Palembang';
-    this.userAddRequest.tbuDateOfBirth = '1981-08-19';
-    this.userAddRequest.tbuEmail = 'jualan.com.2010@gmail.com';
-    this.userAddRequest.tbuPassword = 'P@55w0rd';
-    this.userAddRequest.tbuConfirmPassword = 'P@55w0rd';
+    // this.userAddRequest.tbuFirstname = 'Achmad';
+    // this.userAddRequest.tbuLastname = 'Amri';
+    // this.userAddRequest.tbuMobilePhone = '08158800230';
+    // this.userAddRequest.tbuPlaceOfBirth = 'Palembang';
+    // this.userAddRequest.tbuDateOfBirth = '1981-08-19';
+    // this.userAddRequest.tbuEmail = 'jualan.com.2010@gmail.com';
+    // this.userAddRequest.tbuPassword = 'P@55w0rd';
+    // this.userAddRequest.tbuConfirmPassword = 'P@55w0rd';
   }
 
   register() {
